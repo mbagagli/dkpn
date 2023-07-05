@@ -697,7 +697,7 @@ class PreProc(object):
         # if no horizontal signal, set incidence to 0
         if np.max(hxy) > np.max(vertical) / 1000.0:
             incidence = np.arctan2(vertical, hxy)   # -pi (down) -> 0 (horiz) -> pi (up)
-            incidence = incidence / np.pi   # -1.0 (down) -> 0 (horiz) -> 1.0 (up)
+            incidence = incidence / (np.pi / 2.0)   # -1.0 (down) -> 0 (horiz) -> 1.0 (up)
         else:
             incidence = np.zeros_like(vertical)
         if self.log:

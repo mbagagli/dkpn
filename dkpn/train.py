@@ -375,9 +375,9 @@ class TrainHelp_DomainKnowledgePhaseNet(object):
                                  low=rw_low, high=rw_high,
                                  strategy=kwargs["window_strategy"]),
 
-                sbg.Normalize(demean_axis=-1,
-                              amp_norm_axis=-1,
-                              amp_norm_type=kwargs["amp_norm_type"]),
+                # sbg.Normalize(demean_axis=-1,
+                #               amp_norm_axis=-1,
+                #               amp_norm_type=kwargs["amp_norm_type"]),
 
                 sbg.ProbabilisticLabeller(label_columns=kwargs["phase_dict"], 
                                           sigma=kwargs["sigma"], dim=0),
